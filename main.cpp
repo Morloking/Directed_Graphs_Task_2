@@ -39,14 +39,14 @@ int main() {
 	}
 	file.close();
 
-	//основное выполнение
+	//РѕСЃРЅРѕРІРЅРѕРµ РІС‹РїРѕР»РЅРµРЅРёРµ
 	std::vector <bool> visited(lines + 1, false);
 	for (int i = 1; i <= lines; ++i) {
 		if (!visited[i]) {
 			coreTopologicSortOrgraph(matrix, i, visited, peaksStorage);
 		}
 	}
-	std::cout << "Топологический порядок вершин: ";
+	std::cout << "РўРѕРїРѕР»РѕРіРёС‡РµСЃРєРёР№ РїРѕСЂСЏРґРѕРє РІРµСЂС€РёРЅ: ";
 	for (int i = peaksStorage.size() - 1; i >= 0; --i) {
 		std::cout << peaksStorage[i] << " ";
 	}
